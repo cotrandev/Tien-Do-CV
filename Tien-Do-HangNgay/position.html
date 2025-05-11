@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>My Website div</title>
+<style>
+.testdiv{
+	width:100px;
+	color:#FF0000;
+	background-color:#0033CC;
+	border:solid 3px #FF0000
+	
+}
+
+ul{
+margin-top:0px;
+}
+.menu ul a{
+	color:#FFFFFF;
+	
+}
+.menu li{
+	margin-right:0px;
+	margin-top:0px;
+	padding-top:0px;
+	background-color:#669966;
+	font-size:20px;
+	display:inline-table;
+	height:30px;
+	line-height:40px;
+	padding-left:15px;
+	padding-right:15px;
+}
+.menu li:hover{
+	background-color:#FF0000;
+	font-style:italic;
+}
+.leftmenu{
+	font-size:14px;
+	color:#FFFFFF;
+	background-color:#66CC66;
+	font-size:16px;
+	
+}
+.leftmenu a{
+	text-decoration:none;
+	color:#0000FF
+}
+.leftmenu ul{
+	/*list-style:disc*/
+	list-style:hiragana;
+	/*list-style-image:url(img/icon.PNG);*/
+	list-style-position: inside;
+}
+.leftmenu li{
+	display:list-item;
+	background-color:#33CC66;
+	border:#FF0000 solid 2px;
+	margin-left:-40px;
+	padding-left:15px;
+
+}
+.leftmenu li:hover{
+	background-color:#FFFFFF
+}
+
+.leftmenu div{
+	border:solid #FF0000 2px;
+	border-radius:15px;
+
+
+	
+}
+
+.leftmenu div div:hover{
+	background-color:#996666;
+	font-style:italic
+}
+
+
+</style>
+<script>
+function taomenu()
+{
+	var sanpham=["Máy tính Asus","Máy tính HP","Máy tính Lenovo","Máy tính Dell"];
+				var s="";
+				for(i=0;i<sanpham.length;i++)
+				{	var a='<a href="position.html?'+i+'"><li>'+ sanpham[i] + '</li>';
+					s+=a;
+				}
+				//alert(s);
+				s='<ul>'+s+'</ul>';
+				document.getElementById("javacriptmenu").innerHTML=s;
+				console.log(s);
+}
+
+function hienthimenu()
+{
+	var url = window.location.href;
+	alert(url);
+	var id = url.split('?');
+	console.log(id[1]);
+	switch(id[1])
+	{
+		case 0:
+			document.getElementById("hienthi").innerHTML='Bạn chọn 0';
+		case 1: 
+			document.getElementById("hienthi").innerHTML='Bạn chọn 1';
+		default:
+			document.getElementById("hienthi").innerHTML='Bạn không chọn gì hết';
+	}
+}
+</script>
+</head>
+
+<body>
+<script>
+window.onload = function()
+			{			
+				taomenu();
+				hienthimenu();
+				
+}
+</script>
+<div style="border:solid 3px #990033; border-radius:15px">
+	<div style="width:100%; height:150px; background-color:#333300; position:relative">header
+		<div style="position:absolute; top:30px; left:250px; font-size:36px; color:#FFFFFF; font-style:oblique">vi trí bất kỳ</div>
+		<img src="img/cinqueterre.jpg" style="border-radius:100%; width:100px; height:100px; position:absolute; top:0px; border:#FF0000 solid 5px; top:30px; left:150px" />
+	</div>
+	
+	<div class="menu" style="width:100%; background-color:#CCFF00; height:40px">
+		<ul>
+			<a href="#"><li>Trang chủ</li></a>
+			<a href="#"><li>Thông tin tuyển sinh </li></a>
+			<a href="#"><li>Thông tin đào tạo</li></a>
+			<a href="#"><li>Liên hệ</li></a>
+		</ul>
+	</div>
+	<div>
+		<div class="leftmenu" style="float:left; width:20%; background-color:#339933">
+			<div>
+				<a href="#"><div style="border:solid 1px #CCCC33">Máy tính Asus</div></a>
+				<a href="#"><div style="border:solid 1px #CCCC33">Máy tính HP</div></a>
+				<a href="#"><div style="border:solid 1px #CCCC33">Máy tính lenovo</div></a>
+				<a href="#"><div style="border:solid 1px #CCCC33">Máy tính Dell</div></a>
+				<br />
+			</div>
+			
+			<div  style=" margin-top:15px; list-style-type:disc">
+				<ul>
+					Máy tính Asus</li></a>
+					<a href="#"><li>Máy tính HP</li></a>
+					<a href="#"><li>Máy tính Lenovo</li></a>
+					<a href="#"><li>Máy tính Dell</li></a>
+				</ul>
+			</div>
+			<!--Sử dụng javascript -->
+			<div id="javacriptmenu" style=" margin-top:15px; list-style-type:disc">
+				
+			<script type="text/javascript">
+				
+				
+			</script>
+		
+			</div>
+			<!--Ket thu phan hien thị left menu -->
+		</div>
+		
+		
+		<div style="float:left; width:60%; background-color:#009999">
+		  <div id="hienthi">
+		  	noi dung hien thi
+		  </div>
+		 		
+		</div>
+		<div style="float:right; width:20%">Right</div>
+		<div style="clear:both"></div>
+	</div>
+	<div style="width:100%; height:150px; background-color:#FF0000">footer</div>
+</div>
+</body>
+</html>
