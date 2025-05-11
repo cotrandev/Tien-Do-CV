@@ -1,0 +1,65 @@
+body {
+	font-family: "Times New Roman", Tohama, sans-serif;
+	background: white;
+	font-size: 14pt;
+	margin-left:10%;
+	margin-right:10%;
+}
+.dong-1 {
+	background:#0033CC;
+	color: red;
+}
+.bang {
+	background: red;
+	border: 1px;
+}
+textarea {
+	background: red;
+	color: black;
+	font-weight:bold;
+	font-size:15px;
+}
+.khung-1 {
+	border: solid 3px #990033;
+	width:90%;
+	font-size: 15px;
+}
+.header {
+	font-size:14px;
+	height:40px;
+	width:100%;
+}
+.danh_muc{
+	font-size:14px;
+	color:black;
+	border: solid 2px red;
+	padding-left:20px;
+}
+.do_rong{
+	width:100%;
+}
+.dn {
+	background:#CCCC33;
+	
+}
+.trai {
+	float:left;
+	width:60%;
+	background:#009999;
+}
+.phai {
+	float: right;
+	width: 20%;
+	background:#993333;
+}
+.chan_trang {
+	color: black;
+	background: blue;
+	text-align:center;
+	width: 100%;
+	height: 150px;
+	line-height:150px;
+}
+.cach_deu {
+	height:15px;
+}
